@@ -19,7 +19,8 @@
     "social": "社交媒体",
     "chat": "聊天",
     "builders_chat": "构建者",
-    "keyboard_shortcuts": "键盘快捷键"
+    "keyboard_shortcuts": "键盘快捷键",
+    "brand": "品牌"
   },
   "shortcuts": {
     "section": {
@@ -96,6 +97,7 @@
     },
     "draft_badge": "草稿",
     "draft_banner": "这是一篇未发布的草稿。内容可能不完整或包含不准确的信息。",
+    "no_posts": "暂无文章。",
     "atproto": {
       "view_on_bluesky": "在 Bluesky 上查看",
       "reply_on_bluesky": "在 Bluesky 上回复",
@@ -146,13 +148,25 @@
     "theme_system": "跟随系统",
     "language": "语言",
     "help_translate": "帮助翻译 npmx",
+    "translation_status": "查看全局翻译状态",
     "accent_colors": {
-      "label": "强调色"
+      "label": "强调色",
+      "sky": "天空蓝",
+      "coral": "珊瑚色",
+      "amber": "琥珀色",
+      "emerald": "翠绿色",
+      "violet": "紫罗兰色",
+      "magenta": "洋红色"
     },
     "clear_accent": "清除强调色",
     "translation_progress": "翻译进度",
     "background_themes": {
-      "label": "背景色调"
+      "label": "背景色调",
+      "neutral": "中性",
+      "stone": "石色",
+      "zinc": "锌灰",
+      "slate": "石板灰",
+      "black": "黑色"
     },
     "keyboard_shortcuts_enabled": "启用快捷键",
     "keyboard_shortcuts_enabled_description": "如果某些快捷键与其他浏览器或系统快捷键冲突，可以选择将其禁用。"
@@ -211,7 +225,9 @@
       "radicle": "在 Radicle 上查看",
       "sourcehut": "在 SourceHut 上查看",
       "tangled": "在 Tangled 上查看"
-    }
+    },
+    "collapse": "收起",
+    "expand": "展开"
   },
   "profile": {
     "display_name": "显示名称",
@@ -290,7 +306,8 @@
         "refs": "{count} 个引用 | {count} 个引用",
         "assets": "{count} 个资源 | {count} 个资源"
       },
-      "view_source": "查看源代码"
+      "view_source": "查看源代码",
+      "skills_cli": "skills CLI"
     },
     "links": {
       "main": "主页",
@@ -301,15 +318,23 @@
       "code": "代码",
       "docs": "文档",
       "fund": "资助",
-      "compare": "比较"
+      "compare": "比较",
+      "compare_this_package": "比较此包"
     },
     "likes": {
       "like": "点赞此包",
       "unlike": "取消点赞"
     },
     "docs": {
+      "contents": "目录",
+      "default_not_available": "当前版本暂无文档。",
       "not_available": "文档不可用",
-      "not_available_detail": "我们无法为此版本生成文档。"
+      "not_available_detail": "我们无法为此版本生成文档。",
+      "page_title": "API 文档 - npmx",
+      "page_title_name": "{name} 文档 - npmx",
+      "page_title_version": "{name} 文档 - npmx",
+      "og_title": "{name} - 文档",
+      "view_package": "查看包"
     },
     "get_started": {
       "title": "开始使用",
@@ -394,9 +419,11 @@
       "grouping_major": "主版本",
       "grouping_minor": "次版本",
       "grouping_versions_title": "版本",
+      "grouping_versions_about": "关于版本分组",
       "grouping_versions_all": "全部",
       "grouping_versions_only_recent": "仅最近",
       "grouping_usage_title": "使用率",
+      "grouping_usage_about": "关于使用率分组",
       "grouping_usage_all": "全部",
       "grouping_usage_most_used": "最常用",
       "recent_versions_only_tooltip": "仅显示在过去一年内发布的版本。",
@@ -427,7 +454,8 @@
       "outdated_major": "落后 {count} 个主要版本（最新：{latest}）",
       "outdated_minor": "落后 {count} 个次要版本（最新：{latest}）",
       "outdated_patch": "有可用的补丁更新（最新：{latest}）",
-      "has_replacement": "该依赖有推荐的替代包。"
+      "has_replacement": "该依赖有推荐的替代包。",
+      "vulnerabilities_count": "{count} 个漏洞 | {count} 个漏洞"
     },
     "peer_dependencies": {
       "title": "对等依赖（{count} 个）",
@@ -455,6 +483,15 @@
       "maintainer_template": "{avatar} {char126}{name}"
     },
     "trends": {
+      "chart_assistive_text": {
+        "keyboard_navigation_horizontal": "使用左右方向键在数据点之间切换。",
+        "keyboard_navigation_vertical": "使用上下方向键在数据点之间切换。",
+        "table_available": "下方提供了此图表的数据表格。",
+        "table_caption": "图表数据表"
+      },
+      "chart_view_toggle": "切换视图",
+      "chart_view_combined": "合并视图",
+      "chart_view_split": "分离视图",
       "granularity": "周期",
       "granularity_daily": "每日",
       "granularity_weekly": "每周",
@@ -513,7 +550,8 @@
     "downloads": {
       "title": "每周下载量",
       "community_distribution": "查看社区采用分布",
-      "subtitle": "涵盖所有版本"
+      "subtitle": "涵盖所有版本",
+      "sparkline_nav_hint": "使用 ← →"
     },
     "install_scripts": {
       "title": "安装脚本",
@@ -529,6 +567,7 @@
       "esm": "支持 ES Modules",
       "cjs": "支持 CommonJS",
       "no_esm": "不支持 ES Modules",
+      "wasm": "包含 WebAssembly",
       "types_label": "类型支持",
       "types_included": "包含类型",
       "types_available": "通过 {package} 提供类型",
@@ -603,7 +642,10 @@
       "kb": "{size} kB",
       "mb": "{size} MB"
     },
-    "download": {}
+    "download": {
+      "button": "下载",
+      "tarball": "下载 .tar.gz 格式的 Tarball"
+    }
   },
   "connector": {
     "modal": {
@@ -786,8 +828,12 @@
     "lines": "{count} 行",
     "toggle_tree": "切换文件树",
     "close_tree": "关闭文件树",
+    "copy_content": "复制文件内容",
     "copy_link": "复制链接",
     "view_raw": "查看原始文件",
+    "toggle_container": "切换代码容器宽度",
+    "open_raw_file": "打开原始文件",
+    "open_path_dropdown": "打开路径片段下拉菜单",
     "file_too_large": "文件过大，无法预览",
     "file_size_warning": "{size} 超出了 500KB 的语法高亮限制",
     "failed_to_load": "加载文件失败",
@@ -870,6 +916,7 @@
       "insecure": "有警告"
     },
     "view_selected": "查看选中项",
+    "clear_selected_label": "清除已选择",
     "sort": {
       "label": "排序包",
       "toggle_direction": "切换排序方向",
@@ -1063,7 +1110,10 @@
       "empty_title": "选择要比较的包",
       "empty_description": "在上方搜索并添加至少 2 个包，以查看它们指标的并排比较。",
       "table_view": "表格视图",
-      "charts_view": "图表视图"
+      "charts_view": "图表视图",
+      "no_chartable_data": "所选维度暂无可制图数据。",
+      "bar_chart_nav_hint": "使用 ↑ ↓",
+      "line_chart_nav_hint": "使用 ← →"
     },
     "selector": {
       "search_label": "搜索包",
@@ -1086,6 +1136,10 @@
     "facets": {
       "all": "全选",
       "none": "取消全选",
+      "select_all_category_facets": "选择所有 {category} 维度",
+      "deselect_all_category_facets": "取消选择所有 {category} 维度",
+      "selected_all_category_facets": "已选择所有 {category} 维度",
+      "deselected_all_category_facets": "已取消选择所有 {category} 维度",
       "coming_soon": "即将推出",
       "select_all": "选择所有维度",
       "deselect_all": "取消选择所有维度",
@@ -1172,7 +1226,14 @@
     "file_size_warning": "{size} 超出了 250KB 的对比限制",
     "compare_versions": "差异",
     "compare_versions_title": "与最新版本对比",
-    "version_invalid_url_format": {},
+    "comparing_versions_label": "正在比较版本…",
+    "version_back_to_package": "返回包页面",
+    "version_error_message": "比较版本失败。",
+    "version_invalid_url_format": {
+      "hint": "无效的比较 URL。请使用以下格式：{0}",
+      "from_version": "从",
+      "to_version": "到"
+    },
     "version_selector_title": "版本对比",
     "summary": "摘要",
     "deps_count": "{count} 个依赖",
@@ -1199,7 +1260,18 @@
     "files_button": "文件",
     "select_file_prompt": "从侧边栏选择一个文件以查看其差异",
     "close_files_panel": "关闭文件面板",
-    "filter_files_label": "按更改类型筛选文件"
+    "filter_files_label": "按更改类型筛选文件",
+    "change_ratio": "变更比率",
+    "char_edits": "字符编辑数",
+    "diff_distance": "差异距离",
+    "loading_diff": "正在加载差异…",
+    "loading_diff_error": "加载差异失败",
+    "merge_modified_lines": "合并已修改行",
+    "no_content_changes": "未检测到内容变更",
+    "options": "选项",
+    "view_file": "查看文件",
+    "view_in_code_browser": "在代码浏览器中查看",
+    "word_wrap": "自动换行"
   },
   "pds": {
     "title": "npmx.social",
@@ -1340,12 +1412,117 @@
     }
   },
   "translation_status": {
-    "table": {}
+    "title": "翻译状态",
+    "generated_at": "生成日期：{date}",
+    "welcome": "如果你有兴趣帮助我们将 {npmx} 翻译成下列语言之一，那你来对地方了！这个自动更新的页面会持续列出当前最需要帮助补充的内容。",
+    "p1": "我们使用 {lang} 作为默认语言，共有 {count}。如果你想帮助补充翻译，请在 {bylang} 中找到对应语言并展开详情。",
+    "p1_lang": "美式英语（en-US）",
+    "p1_count": "0 条消息 | 1 条消息 | {count} 条消息",
+    "p2": "开始之前，请先阅读我们的 {guide}，了解翻译流程以及你可以如何参与。",
+    "guide": "本地化（i18n）指南",
+    "by_locale": "按语言区域查看翻译进度",
+    "by_file": "按文件查看翻译进度",
+    "complete_text": "该翻译已完成，做得太棒了！",
+    "missing_text": "缺失",
+    "missing_keys": "没有缺失的翻译 | 缺失翻译 | 缺失翻译",
+    "progress_label": "{locale} 的进度状态",
+    "table": {
+      "file": "文件",
+      "status": "状态",
+      "error": "加载文件列表时出错。",
+      "empty": "未找到文件",
+      "file_link": "在 GitHub 上编辑 {file}（{lang}）"
+    }
+  },
+  "vacations": {
+    "title": "休假中",
+    "meta_description": "npmx 团队在休整。一周后重新开放了 Discord。",
+    "heading": "充电中",
+    "subtitle": "我们构建 npmx 的节奏快到让 {some} 人睡眠不足。我们不希望这成为常态！所以我们一起休息了一周。",
+    "illustration_alt": "一排温馨的小图标",
+    "poke_log": "拨动营火",
+    "what": {
+      "title": "发生了什么",
+      "p1": "Discord 于 {dates} 期间关闭。",
+      "dates": "2 月 14 日至 21 日",
+      "p2": "所有邀请链接都被移除，频道也都锁定了，只有 {garden} 仍然开放，供想继续待在这里的人使用。",
+      "garden": "#garden"
+    },
+    "meantime": {
+      "title": "与此同时",
+      "p1": "{site} 和 {repo} 仍然开放着，人们依旧在深入研究、提交一些 issue、开了几个 PR，不过大多数人主要是在某个温暖的壁炉旁待着。",
+      "repo_link": "仓库"
+    },
+    "return": {
+      "title": "我们回来了！",
+      "p1": "我们带着满满电量回归，并准备好为 3 月 3 日做最后冲刺。{social} 获取更新。",
+      "social_link": "在 Bluesky 上关注我们"
+    },
+    "stats": {
+      "contributors": "贡献者",
+      "commits": "提交",
+      "pr": "已合并 PR",
+      "subtitle": {
+        "some": "一些",
+        "all": "全部"
+      }
+    }
   },
   "action_bar": {
     "title": "操作栏",
     "selection": "0 个项目被选中 | 1 个项目被选中 | {count} 个项目被选中",
     "shortcut": "按下 \"{key}\" 快捷键以执行操作",
     "button_close_aria_label": "关闭操作面板"
-  }
+  },
+  "logo_menu": {
+    "copy_svg": "复制标志为 SVG",
+    "copied": "已复制！",
+    "browse_brand": "浏览品牌素材包"
+  },
+  "brand": {
+    "title": "品牌",
+    "heading": "品牌",
+    "meta_description": "npmx 的品牌指南、标志、颜色和字体，可供新闻与媒体使用。",
+    "intro": "在你的项目、文章和媒体中使用 npmx 品牌的资源与指南。",
+    "logos": {
+      "title": "标志",
+      "description": "下载 SVG 和 PNG 格式的 npmx 标志。请根据背景选择合适的版本。",
+      "wordmark": "完整文字标识",
+      "wordmark_alt": "带蓝色斜杠、用于深色背景的 npmx 完整文字标识",
+      "wordmark_light_alt": "带强调色斜杠、用于浅色背景的 npmx 完整文字标识",
+      "mark": "图形标识",
+      "mark_alt": "带圆点和斜杠、用于深色背景的 npmx 图形标识",
+      "mark_light_alt": "带圆点和斜杠、用于浅色背景的 npmx 图形标识",
+      "on_dark": "深色背景",
+      "on_light": "浅色背景",
+      "download_svg": "SVG",
+      "download_png": "PNG",
+      "download_svg_aria": "下载 {name} 为 SVG",
+      "download_png_aria": "下载 {name} 为 PNG"
+    },
+    "customize": {
+      "title": "自定义你的标志",
+      "description": "预览带有你所选强调色和背景的 npmx 标志。预览会反映你当前的设置，选择颜色、切换背景，然后下载。",
+      "accent_label": "强调色",
+      "bg_label": "背景",
+      "download_svg_aria": "下载自定义标志为 SVG",
+      "download_png_aria": "下载自定义标志为 PNG"
+    },
+    "typography": {
+      "title": "字体排印",
+      "description": "npmx 的界面文本和代码均使用由 Vercel 提供的 Geist 字体家族。",
+      "sans": "Geist Sans",
+      "sans_desc": "用于正文和界面元素。",
+      "mono": "Geist Mono",
+      "mono_desc": "用于代码、标题和技术内容。",
+      "pangram": "敏捷的棕色狐狸跳过了懒狗",
+      "numbers": "0123456789"
+    },
+    "guidelines": {
+      "title": "补充说明",
+      "message": "无障碍对我们很重要，我们也希望你在使用这些媒体资源时与我们保持同样的理念。使用上述素材时，请确保其与背景之间有足够的对比度，且尺寸不要小于 24px。如果你需要任何其他资源或关于项目的更多信息，欢迎通过 {link} 联系我们。",
+      "discord_link_text": "chat.npmx.dev"
+    }
+  },
+  "alt_logo_kawaii": "npmx 标志的一个可爱、圆润且多彩的版本。"
 }
